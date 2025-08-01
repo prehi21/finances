@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Finance Tracker</h2>
+    <ul>
+      <li onclick="showTab('dashboard')">Dashboard</li>
+      <li onclick="showTab('income')">Income</li>
+      <li onclick="showTab('expenses')">Expenses</li>
+      <li onclick="showTab('credit-cards')">Credit Cards</li>
+      <li onclick="showTab('goals')">Goals</li>
+      <li onclick="showTab('reports')">Reports</li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div id="dashboard" class="tab">Welcome to your Dashboard!</div>
+    <div id="income" class="tab" style="display:none;">Income Tracker Coming Soon</div>
+    <div id="expenses" class="tab" style="display:none;">Expenses Tracker Coming Soon</div>
+    <div id="credit-cards" class="tab" style="display:none;">
+      <h2>Credit Card Tracker</h2>
+      <form id="cc-form">
+        <input type="text" id="cc-name" placeholder="Card Name" required />
+        <input type="number" id="cc-balance" placeholder="Balance" required />
+        <input type="number" id="cc-rate" placeholder="Interest Rate (%)" required />
+        <input type="number" id="cc-minimum" placeholder="Monthly Payment" required />
+        <button type="submit">Add Card</button>
+      </form>
+      <div id="cc-list"></div>
+    </div>
+    <div id="goals" class="tab" style="display:none;">Goals Section Coming Soon</div>
+    <div id="reports" class="tab" style="display:none;">Reports + CSV Upload Coming Soon</div>
+  </div>
+  <script src="chart.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
